@@ -1,0 +1,4 @@
+
+hsquid:S2259"GA "NullPointerException" could be thrown; "asMyEnum()" can return null.(¶Ë»òøÿÿÿÿ8Ô¶İâê/
+Ssquid:S4973"9Use the "equals" method if value comparison was intended.(Ğ¶şÿÿÿÿ
+¨%squid:RedundantThrowsDeclarationCheck"mRemove the declaration of thrown exception 'java.lang.IllegalArgumentException' which is a runtime exception.(ÀÂÎÃşÿÿÿÿ8”šŞâê/

@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+  postgres:
+    image: postgres
+    ports:
+      - 5433:5432
+    volumes:
+      - ./postgres_data:/postgres_data/database_init.sql
+    environment:
+      POSTGRES_DB: issuesdb
+      POSTGRES_USER: pmbuser
+      POSTGRES_PASSWORD: pmbuser
+
+volumes:
+  postgres_data:

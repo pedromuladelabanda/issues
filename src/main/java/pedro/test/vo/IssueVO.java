@@ -15,6 +15,8 @@ import lombok.ToString;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class IssuesVO {
-    private String issue;
+public class IssueVO {
+    private String  issue;
+    private Integer labelType;
+    private String  description;
 }
