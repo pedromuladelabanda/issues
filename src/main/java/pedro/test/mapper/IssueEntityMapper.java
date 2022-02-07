@@ -7,13 +7,15 @@ import pedro.test.entity.IssueEntity;
 
 @Component("IssueEntityMapper")
 public class IssueEntityMapper implements IMapper<IssueDTO, IssueEntity> {
+
+
     @Override
-    public IssueEntity classToEntity(IssueDTO model) {
-        return new IssueEntity(model.getIssue(), model.getLabelType(), model.getDescription());
+    public IssueDTO classToEntity(IssueEntity model) {
+        return null;
     }
 
     @Override
-    public IssueDTO entityToClass(IssueEntity entity) {
-        return new IssueDTO(entity.getIssue(), entity.getLabel(), entity.getDescription());
+    public IssueEntity entityToClass(IssueDTO entity) {
+        return new IssueEntity(null, entity.getIssue(), entity.getDescription(),  entity.getLabelType());
     }
 }

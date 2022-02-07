@@ -1,6 +1,4 @@
 
-Y
-)src/main/java/pedro/test/vo/IssuesVO.java,5\0\507eeb124d662839bbbd20d83e5162cb968fb70a
 _
 /src/main/java/pedro/test/IssuesApplication.java,2\7\27b26dc0d39e5acc426c2339ef472046fb99b4bb
 R
@@ -9,12 +7,8 @@ R
 issuestest.iml,0\c\0c912b35e871c2ea6399ad1846bc0572dabf0073
 P
  src/main/resources/bootstrap.yml,2\8\283df02559fc6e56de18ce4a783260b764128dcf
-m
-=src/main/java/pedro/test/service/impl/GitRestServiceImpl.java,4\0\40228924d3a279a39e3c245629bbb4ace4827496
 x
 Hsrc/main/java/pedro/test/controller/interfaces/IssuesRestController.java,4\8\480b0c0b7448f3659350d77bbf4884bd4bbe03c9
-o
-?src/main/java/pedro/test/service/interfaces/GitRestService.java,9\c\9cb68bb9196fde07822c9e7745612f2e33715f8f
 v
 Fsrc/main/java/pedro/test/controller/impl/IssuesRestControllerImpl.java,c\d\cd7e6932ca3a762ace2ce1af4d2acffc1953e835
 7
@@ -23,7 +17,5 @@ Fsrc/main/java/pedro/test/controller/impl/IssuesRestControllerImpl.java,c\d\cd7
 	ReadMe.md,a\2\a225a7e79496c5a1d847c78c3db651eb302ec867
 O
 local-docker/docker-compose.yml,7\4\742700dcfc6042508b7194a20ce320d6f495c52e
-O
-postgres_data/database_init.sql,3\f\3f284e7fbd206d20afcfa0f945fb17ceed6fbe1e
 d
 4src/main/java/pedro/test/common/types/LabelType.java,b\e\becce3a890d7969ffd11a407a166c971ec7acbb4

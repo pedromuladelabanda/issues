@@ -22,10 +22,10 @@ public interface IssuesRestController {
             @PathVariable(value = "filters", required = false) String filters);
 
     @PostMapping(value = "/create")
-    public IssueVO create(@RequestBody IssueVO scenario);
+    public void create(@RequestBody IssueVO scenario);
 
     @PutMapping(value = "/update")
-    public IssueVO update(@RequestBody IssueVO scenario);
+    public void update(@RequestBody IssueVO scenario);
 
 
     /**

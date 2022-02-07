@@ -18,6 +18,7 @@ import java.util.List;
 
 import pedro.test.common.types.LabelType;
 import pedro.test.controller.interfaces.IssuesRestController;
+import pedro.test.service.interfaces.IssueRestService;
 import pedro.test.vo.IssueVO;
 
 @RestController
@@ -25,8 +26,12 @@ import pedro.test.vo.IssueVO;
 public class IssuesRestControllerImpl implements IssuesRestController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(IssuesRestControllerImpl.class);
+
     @Autowired
     private static LabelType labelType;
+
+    @Autowired
+    private static IssueRestService issueRestService;
 
     /**@Autowired
     private IssueRestServiceImpl gitRestService;
@@ -37,7 +42,7 @@ public class IssuesRestControllerImpl implements IssuesRestController {
     public @ResponseBody
     IssueVO getIssue(Long id){
         LOGGER.info("REST CONTROLLER {} INVOCATION", this.getClass().getName());
-        return null;
+        return issueRestService.requestIssueById(id);
     }
 
 
@@ -54,17 +59,17 @@ public class IssuesRestControllerImpl implements IssuesRestController {
     @Override
     @PostMapping(value = "/create", produces = MediaType.APPLICATION_JSON_VALUE)
     @HystrixCommand
-    public IssueVO create(IssueVO issueVO) {
+    public void create(IssueVO issueVO) {
         LOGGER.info("REST CONTROLLER {} INVOCATION", issueVO.getIssue() + issueVO.getLabelType());
-        return null;
+        issueRestService.saveIssue(issueVO);
     }
 
     @Override
     @PutMapping(value = "/update", produces = MediaType.APPLICATION_JSON_VALUE)
     @HystrixCommand
-    public IssueVO update(IssueVO issueVO) {
+    public void update(IssueVO issueVO) {
         LOGGER.info("REST CONTROLLER {} INVOCATION", this.getClass().getName());
-        return null;
+        issueRestService.saveIssue(issueVO);
     }
 
 }
