@@ -11,11 +11,19 @@ public class IssueEntityMapper implements IMapper<IssueDTO, IssueEntity> {
 
     @Override
     public IssueDTO classToEntity(IssueEntity model) {
-        return null;
+        return IssueDTO.builder()
+                .labelType(model.getLabel())
+                .issue(model.getIssue())
+                .description(model.getDescription())
+                .build();
     }
 
     @Override
     public IssueEntity entityToClass(IssueDTO entity) {
-        return new IssueEntity(null, entity.getIssue(), entity.getDescription(),  entity.getLabelType());
+        return IssueEntity.builder()
+                .label(entity.getLabelType())
+                .issue(entity.getIssue())
+                .description(entity.getDescription())
+                .build();
     }
 }

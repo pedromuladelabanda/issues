@@ -60,7 +60,7 @@ public class IssuesRestControllerImpl implements IssuesRestController {
     @PostMapping(value = "/create", produces = MediaType.APPLICATION_JSON_VALUE)
     @HystrixCommand
     public void create(IssueVO issueVO) {
-        LOGGER.info("REST CONTROLLER {} INVOCATION", issueVO.getIssue() + issueVO.getLabelType());
+        LOGGER.info("REST CONTROLLER {} INVOCATION", this.getClass().getName());
         issueRestService.saveIssue(issueVO);
     }
 
